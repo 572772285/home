@@ -2,10 +2,39 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>user-login</title>
+	<title><%= htmlWebpackPlugin.options.title %> -LRY电商平台</title>
 </head>
 <body>
-	user-login
+	<%= require('html-loader!./common/logo.html') %>
+	<div class="form">
+		<div class="container">
+			<div class="form-box">
+				<h2 class="title">用户登录</h2>
+				<div class="error-item error-icon hide">
+					<i class="fa fa-times " ></i>
+					<p class="error-msg"></p>
+				</div>
+				<div class="form-item">
+					<label for="" class="form-label">
+						<i class="fa fa-user"></i>
+					</label>
+					<input type="text" class="form-content" name="username" placeholder="请输入账号">
+				</div>
+				<div class="form-item">
+					<label for="" class="form-label">
+						<i class="fa fa-lock"></i>
+					</label>
+					<input type="text" class="form-content" name="password" placeholder="请输入密码">
+				</div>
+				<div class="btn-item">
+					<a href="javascript:;" class="btn btn-sumbit" id="btn-sumbit">提交</a>
+				</div>
+				<div class="link-item">
+					<a href="./user-register.html" class="link-register">注册</a>
+				</div>
+			</div>
+		</div>
+	</div>
 	<%= require('html-loader!./common/footer.html') %>
 </body>
 </html>

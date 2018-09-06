@@ -1,0 +1,25 @@
+.nav{
+	height: 30px;
+	line-height: 30px;
+	background-color: #fff;
+}
+.user-info{
+	float: left;
+}
+.user-info .not-login a{
+	margin-right: 8px;
+}
+.nav-list{
+	float: right
+}
+.nav-list li{
+	float: left;
+	margin-left: 5px;
+}
+.nav-list .nav-item a{
+	margin-left: 5px;
+}
+.username{
+	color: gold;
+	font-weight: bold;
+}

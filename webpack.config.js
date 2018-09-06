@@ -4,9 +4,11 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const publicPath = "/";
 //导出配置
-const getHTMLConfig=(name)=>({
-  title: 'KMALL-'+name,
+const getHTMLConfig=(name,title)=>({
+  title: title,
   template:'./src/view/'+name+'.html',
+  inject:true,
+  hash:true,
   filename: name+'.html',
   chunks:['common',name]
 })
@@ -18,7 +20,9 @@ module.exports = {
 	entry:{
     'common':'./src/common/index.js',
     'index':'./src/pages/index/index.js',
-    'user-login':'./src/pages/user-login/index.js'
+    'user-login':'./src/pages/user-login/index.js',
+    'user-register':'./src/pages/user-register/index.js',
+    'result':'./src/pages/result/index.js'
   },	
   //配置额外模块
   
@@ -30,6 +34,18 @@ module.exports = {
 		//出口文件存储路径
 		path:path.resolve(__dirname,'dist')
 	},
+      //配置别名
+    resolve:{
+        alias:{
+            pages:path.resolve(__dirname,'./src/pages'),
+            util:path.resolve(__dirname,'./src/util'),
+            api:path.resolve(__dirname,'./src/api'),
+            common:path.resolve(__dirname,'./src/common'),
+            node_modules:path.resolve(__dirname,'./node_modules'),
+            util:path.resolve(__dirname,'./src/util/'),
+            user:path.resolve(__dirname,'./src/service/user/')
+        }
+    },
 	//配置loader
     module: {
         rules: [
@@ -47,10 +63,14 @@ module.exports = {
           },
           //处理图片loader
     	    {
-            test: /\.(png|jpg|gif)$/,
+            test: /\.(png|jpg|gif|ttf|woff2|woff|eot|svg)\??.*$/,
             use: [
               {
-                loader: 'url-loader'
+                loader: 'url-loader',
+                options:{
+                  limit:100,//图片大小限制，小于该值打包后为base64
+                  name:'resource/[name].[ext]'
+                }
               }
             ]
         	},
@@ -67,8 +87,10 @@ module.exports = {
         ]
   },
   plugins: [
-  	new HtmlWebpackPlugin(getHTMLConfig('index')),
-    new HtmlWebpackPlugin(getHTMLConfig('user-login')),
+  	new HtmlWebpackPlugin(getHTMLConfig('index','首页')),
+    new HtmlWebpackPlugin(getHTMLConfig('user-login','用户登录')),
+    new HtmlWebpackPlugin(getHTMLConfig('user-register','用户注册')),
+    new HtmlWebpackPlugin(getHTMLConfig('result','结果提示')),
 
   	new CleanWebpackPlugin(['dist']),
     new MiniCssExtractPlugin({
@@ -78,6 +100,13 @@ module.exports = {
   devServer: {
     contentBase: './dist',
     port:3002,
-    historyApiFallback:true
+    historyApiFallback:true,
+    //跨域代理
+    proxy:{
+      "/user":{
+        target:"http://127.0.0.1:3001",
+        changeOrigin:true
+      }
+    }
   }
 }

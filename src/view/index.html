@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>kmall</title>
+	<%= require('html-loader!./common/header.html') %>
+	<title><%= htmlWebpackPlugin.options.title %> -LRY电商平台</title>
 </head>
 <body>
-	index
+	<%= require('html-loader!./common/nav.html') %>
 	<%= require('html-loader!./common/footer.html') %>
 </body>
 </html>

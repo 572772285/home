@@ -19,6 +19,23 @@ var page={
 	//绑定事件
 	bindEvent:function(){
 		var _this=this;
+		$('[name=username]').on('blur',function(){
+			var username=$(this).val()
+			if(!_util.validate(username,"require")){
+				return 
+			}
+			if(!_util.validate(username,"username")){
+				return 
+			}
+			console.log(username)
+			_user.checkUserName(username,function(){
+				//用户名可用
+				formErr.hide()
+			},function(result){
+				//用户名存在
+				$('.error-item').show().find('.error-msg').text(result)
+			})
+		})
 		$('#btn-sumbit').on('click',function(){
 			_this.submit()
 		})
@@ -28,7 +45,10 @@ var page={
 		//1获取数据
 		var formData={
 			username:$.trim($('[name="username"]').val()),
-			password:$.trim($('[name="password"]').val())
+			password:$.trim($('[name="password"]').val()),
+			repassword:$.trim($('[name="repassword"]').val()),
+			phone:$.trim($('[name="phone"]').val()),
+			email:$.trim($('[name="email"]').val())
 		}
 		//2验证数据
 		var validateResult=this.validate(formData)
@@ -36,8 +56,8 @@ var page={
 		//验证通过
 		if(validateResult.status){
 			formErr.hide()
-			_user.login(formData,function(){
-				_util.goHome()
+			_user.register(formData,function(){
+				window.location.href='./result.html?type=register'
 			},function(result){
 				$('.error-item').show().find('.error-msg').text(result)
 			})
@@ -68,6 +88,27 @@ var page={
 		//验证密码格式错误
 		if(!_util.validate(formData.password,"password")){
 			result.msg = '密码格式错误';
+			return result;
+		}
+		
+		if(formData.repassword!=formData.password){
+			result.msg = '两次密码不一致';
+			return result;
+		}
+		if(!_util.validate(formData.phone,"require")){
+			result.msg = '手机号码不能为空';
+			return result;
+		}
+		if(!_util.validate(formData.phone,"phone")){
+			result.msg = '手机号码格式不对';
+			return result;
+		}
+		if(!_util.validate(formData.email,"require")){
+			result.msg = '邮箱不能为空';
+			return result;
+		}
+		if(!_util.validate(formData.email,"email")){
+			result.msg = '邮箱格式不对';
 			return result;
 		}
 

@@ -1,0 +1,47 @@
+var _util=require('util/index.js')
+var _user={
+	logout:function(success,error){
+		_util.request({
+			url:'/user/logout',
+			success:success,
+			error:error
+		})
+	},
+	login:function(data,success,error){
+		_util.request({
+			method:'post',
+			url:'/user/login',
+			data:data,
+			success:success,
+			error:error
+		})
+	},
+	getUserInfo:function(success,error){
+		_util.request({
+			url:'/user/userInfo',
+			success:success,
+			error:error
+		})
+	},
+	checkUserName:function(username,success,error){
+		_util.request({
+			url:'/user/checkUserName',
+			data:{
+				username:username
+			},
+			success:success,
+			error:error
+		})
+	},
+	register:function(data,success,error){
+		_util.request({
+			method:'post',
+			url:'/user/register',
+			data:data,
+			success:success,
+			error:error
+		})
+	}
+}
+
+module.exports=_user

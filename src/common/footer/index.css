@@ -1,0 +1,13 @@
+.footer{
+	text-align: center;
+	margin-top: 10px;
+}
+.links{
+	margin-bottom: 10px;
+}
+.links .link{
+	padding: 0 10px;
+}
+.copyright{
+	font-size: 12px;
+}
