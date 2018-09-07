@@ -1,7 +1,8 @@
 .nav{
 	height: 30px;
 	line-height: 30px;
-	background-color: #fff;
+	background-color: #f3f3f3;
+	font-size: 14px;
 }
 .user-info{
 	float: left;

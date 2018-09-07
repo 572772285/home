@@ -22,6 +22,11 @@ var page={
 		$('#btn-sumbit').on('click',function(){
 			_this.submit()
 		})
+		$('input').on('keyup',function(e){
+			if(e.keyCode==13){
+				_this.submit()
+			}
+		})
 	},
 	submit:function(){
 		// alert('aa')
@@ -37,7 +42,7 @@ var page={
 		if(validateResult.status){
 			formErr.hide()
 			_user.login(formData,function(){
-				_util.goHome()
+				window.location.href=_util.getParamFromUrl('redirect')||'/index.html'
 			},function(result){
 				$('.error-item').show().find('.error-msg').text(result)
 			})

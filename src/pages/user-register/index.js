@@ -39,6 +39,11 @@ var page={
 		$('#btn-sumbit').on('click',function(){
 			_this.submit()
 		})
+		$('input').on('keyup',function(e){
+			if(e.keyCode==13){
+				_this.submit()
+			}
+		})
 	},
 	submit:function(){
 		// alert('aa')

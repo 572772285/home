@@ -1,7 +1,8 @@
 .log-box{
-	background-color: #fff;
+	background-color: #ff1f3d;
+	font-size: 30px;
 }
 .log-text{
-	color: red;
+	color: #2e2d29;
 	text-decoration: none;
 }

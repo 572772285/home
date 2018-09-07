@@ -1,3 +1,4 @@
+var hogan=require('hogan.js')
 var _util={
 	request:function(params){
 		var _this=this;
@@ -24,7 +25,8 @@ var _util={
 		alert(msg)
 	},
 	dologin:function(){
-		window.location.href='/user-login.html'
+		//登陆页面 传一个参数
+		window.location.href='/user-login.html?redirect='+encodeURIComponent(window.location.href)
 	},
 	goHome:function(){
 		window.location.href='/'
@@ -33,8 +35,12 @@ var _util={
 		var query=window.location.search.substr(1)
 		var reg=new RegExp('(^|&)'+key+'=([^&]*)(&|$)')
 		var result=query.match(reg);
-		console.log(result)
 		return result ? decodeURIComponent(result[2])  :null
+	},
+	render:function(tpl,data){
+		var template=hogan.compile(tpl);
+		var html=template.render(data); //render一个对象
+		return html;
 	},
 	validate:function(value,type){
 		var value = $.trim(value)

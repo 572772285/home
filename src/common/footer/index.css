@@ -7,6 +7,8 @@
 }
 .links .link{
 	padding: 0 10px;
+	color: black;
+	font-size: 14px;
 }
 .copyright{
 	font-size: 12px;

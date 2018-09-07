@@ -4,7 +4,7 @@ var _util=require('util/index.js')
 var nav={
 	init:function(){
 		this.bindEvent();
-		this.loadUserInfo()
+		this.loadUserName()
 		this.loadCartInfo()
 		return this
 	},
@@ -21,8 +21,8 @@ var nav={
 	loadCartInfo:function(){
 
 	},
-	loadUserInfo:function(){
-		_user.getUserInfo(function(userInfo){
+	loadUserName:function(){
+		_user.getUserName(function(userInfo){
 			console.log(userInfo)
 			$('.not-login').hide()
 			$('.login')

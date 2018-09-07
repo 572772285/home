@@ -1,0 +1,29 @@
+.search-box{
+	height: 80px;
+	padding: 18px 0;
+	box-sizing: border-box;
+	background-color: #ff8300;
+}
+.log{
+	float: left;
+	font-size: 30px;
+	font-weight: bold;
+}
+.search{
+	float: left;
+}
+.btn{
+	font-size: 16px;
+	height: 42px;
+	line-height: 42px;
+}
+.search-input{
+	width: 400px;
+	margin-left: 200px;
+	outline: none;
+	border: 2px solid red;
+	height: 38px;
+	padding-left: 10px;
+	font-size: 14px;
+	float: left;
+}

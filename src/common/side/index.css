@@ -1,0 +1,42 @@
+.user-center{
+	width: 85%;
+	height: 800px;
+	margin: 0 auto;
+}
+.containner{
+	width: 100%;
+	height: 100%;
+}
+.left{
+	float: left;
+	width: 10%;
+	height: 100%;
+	background-color: #fff;
+}
+.right{
+	float: left;
+	margin-left: 10px;
+	height: 100%;
+	width: 80%;
+	background-color: #fff;
+}
+.side-item{
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+.side-item a{
+	text-decoration: none;
+	color: #000;
+}
+.side-item:hover{
+	background-color: #f0f0f0;
+}
+.active{
+	border-right:5px solid red; 
+	box-sizing: border-box;
+}
+.active a{
+	color: #fa6700;
+}
