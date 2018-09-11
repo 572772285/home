@@ -1,0 +1,138 @@
+.product-intro{
+	margin-bottom: 20px;
+}
+.product-img{
+	float: left;
+	width: 420px;
+	margin-right: 20px;
+}
+.product-main-img{
+	width: 420px;
+	height: 420px;
+	margin-bottom: 10px;
+	border: 1px solid #999;
+	box-sizing: border-box;
+}
+.product-small-img-item img,
+.product-main-img img{
+	width: 100%;
+	height: 100%;
+}
+.product-small-img-list{
+	overflow: hidden;
+	width: 420px;
+}
+.product-small-img-item{
+	width: 76px;
+	height: 76px;
+	margin-right: 10px;
+	float: left;
+}
+.product-small-img-item:last-child{
+	margin-right: 0;
+}
+.product-info{
+	width: 630px;
+	float: left;
+}
+.product-info .product-name{
+	font-size: 18px;
+	font-weight: bold;
+	height: 40px;
+	line-height: 40px;
+}
+.product-info .product-description{
+	font-size: 16px;
+	height: 60px;
+	line-height: 30px;
+	color: orange;
+}
+.product-info .product-info-item{
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+	box-sizing: border-box;
+}
+.product-info .product-info-item.product-price{
+	background: #ddd;
+}
+.product-info .product-info-item.product-price .info{
+	color: orange;
+}
+.product-info .product-info-item.product-count{
+	position: relative;
+}
+.product-info .product-info-item.product-count .count-input{
+	width: 30px;
+	height: 30px;
+	text-align: center;
+}
+.product-info .product-info-item .btn-count{
+	position: absolute;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	font-size: 18px;
+	margin-left: 5px;
+	cursor: pointer;
+	user-select: auto;
+}
+.product-info .plus{
+	top: 2px;
+}
+.product-info .minus{
+	top: 20px;
+}
+.product-info .add-cart{
+	margin-left: 10px;
+	background-color: red;
+	font-size: 14px;
+	width: 80px;
+	height: 30px;
+	cursor: pointer;
+	border-radius: 5px;
+	line-height: 30px;
+	text-align: center;
+}
+.product-info .add-cart:hover{
+	opacity: 0.7;
+}
+.product-info .add-cart a{
+	color: #fff;
+}
+.product-detail .tab{
+
+}
+.product-detail .tab-list{
+	height: 40px;
+	line-height: 40px;
+	background: #ddd;
+	border-bottom: 1px solid orange;
+}
+.product-detail .tab-item{
+	float: left;
+	width: 80px;
+	height: 100%;
+	padding: 0 10px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	color: #333;
+	border: none;
+}
+.product-detail .tab-item.active{
+	background: orange;
+	color: #fff;
+}
+.product-detail .tab-content{
+	padding: 10px;
+	min-height: 200px;
+}
+.product-small-img-item.active{
+	border: 1px solid #f21;
+	box-sizing: border-box;
+}

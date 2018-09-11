@@ -1,0 +1,35 @@
+.pagination-box{
+	text-align: center;
+}
+.pagination-list{
+}
+.pagination-item{
+	float: left;
+	width: 25px;
+	height: 25px;
+	border: 1px solid skyblue;
+	text-align: center;
+	line-height: 25px;
+	margin-right: 5px;
+	font-size: 14px;
+	cursor: pointer;
+	user-select: none;
+}
+.pagination-item:first-child,
+.pagination-item:nth-last-child(2){
+	width:60px;
+}
+.disabled{
+	cursor: auto;
+	border: 1px solid #888;
+	color: #888;
+}
+.active{
+	border: 1px solid orange;
+	cursor: auto;
+}
+.pagination-sumn{
+	display: inline-block;
+	font-size: 14px;
+	margin-left: 10px;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<%= require('html-loader!./common/header.html') %>
+	<title><%= htmlWebpackPlugin.options.title %> -LRY电商平台</title>
+</head>
+<body>
+	<%= require('html-loader!./common/nav.html') %>
+	<%= require('html-loader!./common/search.html') %>
+		<div class="list">
+			<div class="containner clearfix">
+				<ul class="sort">
+					<li class="sort-item default active">默认排序</li>
+					<li class="sort-item price">按价格排序
+						<i class="fa fa-sort-asc"></i>
+						<i class="fa fa-sort-desc"></i>
+					</li>
+				</ul>
+				<div class="product-list-box clearfix">
+				
+				</div>
+				<div class="pagination-box">
+					<!-- <ul class="pagination-list">
+						<li class="pagination-item" data-value="1">1</li>
+						<li class="pagination-item" data-value="2">2</li>
+						<li class="pagination-item" data-value="3">3</li>
+					</ul> -->
+				</div>
+			</div>
+		</div>
+		
+	<%= require('html-loader!./common/footer.html') %>
+</body>
+</html>

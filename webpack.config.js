@@ -20,6 +20,8 @@ module.exports = {
 	entry:{
     'common':'./src/common/index.js',
     'index':'./src/pages/index/index.js',
+    'list':'./src/pages/list/index.js',
+    'detail':'./src/pages/detail/index.js',
     'user-login':'./src/pages/user-login/index.js',
     'user-register':'./src/pages/user-register/index.js',
     'result':'./src/pages/result/index.js',
@@ -45,7 +47,9 @@ module.exports = {
             common:path.resolve(__dirname,'./src/common'),
             node_modules:path.resolve(__dirname,'./node_modules'),
             util:path.resolve(__dirname,'./src/util/'),
-            user:path.resolve(__dirname,'./src/service/user/')
+            user:path.resolve(__dirname,'./src/service/user/'),
+            images:path.resolve(__dirname,'./src/images/'),
+            service:path.resolve(__dirname,'./src/service/')
         }
     },
 	//配置loader
@@ -96,6 +100,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin(getHTMLConfig('index','首页')),
+    new HtmlWebpackPlugin(getHTMLConfig('list','列表页')),
+    new HtmlWebpackPlugin(getHTMLConfig('detail','详情页')),
     new HtmlWebpackPlugin(getHTMLConfig('user-login','用户登录')),
     new HtmlWebpackPlugin(getHTMLConfig('user-register','用户注册')),
     new HtmlWebpackPlugin(getHTMLConfig('result','结果提示')),
