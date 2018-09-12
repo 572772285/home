@@ -2,7 +2,7 @@ var _util=require('util/index.js')
 var _user={
 	getProductList:function(data,success,error){
 		_util.request({
-			url:'/user/productList',
+			url:'/product/homeList',
 			data:data,
 			success:success,
 			error:error
@@ -10,7 +10,7 @@ var _user={
 	},
 	getProductDetail: function (data,success,error) {
 		_util.request({
-			url:'/user/productDetail',
+			url:'/product/homeDetail',
 			data:data,
 			success:success,
 			error:error

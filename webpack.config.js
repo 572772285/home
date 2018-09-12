@@ -22,6 +22,7 @@ module.exports = {
     'index':'./src/pages/index/index.js',
     'list':'./src/pages/list/index.js',
     'detail':'./src/pages/detail/index.js',
+    'cart':'./src/pages/cart/index.js',
     'user-login':'./src/pages/user-login/index.js',
     'user-register':'./src/pages/user-register/index.js',
     'result':'./src/pages/result/index.js',
@@ -102,6 +103,7 @@ module.exports = {
     new HtmlWebpackPlugin(getHTMLConfig('index','首页')),
     new HtmlWebpackPlugin(getHTMLConfig('list','列表页')),
     new HtmlWebpackPlugin(getHTMLConfig('detail','详情页')),
+    new HtmlWebpackPlugin(getHTMLConfig('cart','购物车')),
     new HtmlWebpackPlugin(getHTMLConfig('user-login','用户登录')),
     new HtmlWebpackPlugin(getHTMLConfig('user-register','用户注册')),
     new HtmlWebpackPlugin(getHTMLConfig('result','结果提示')),
@@ -120,6 +122,14 @@ module.exports = {
     //跨域代理
     proxy:{
       "/user":{
+        target:"http://127.0.0.1:3001",
+        changeOrigin:true
+      },
+      "/product":{
+        target:"http://127.0.0.1:3001",
+        changeOrigin:true
+      },
+      "/cart":{
         target:"http://127.0.0.1:3001",
         changeOrigin:true
       }
