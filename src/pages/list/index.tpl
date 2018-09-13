@@ -1,7 +1,7 @@
 <ul class="product-list">
 	{{#list}}
 	<li class="product-item">
-		<a href="./detail.html?productId={{_id}}">
+		<a href="./detail.html?productId={{_id}}" target="_blank">
 			<img class="product-img" src="{{image}}" alt="{{name}}">
 			<p class="product-price">￥ {{price}}</p>
 			<p class="product-name">{{name}}</p>

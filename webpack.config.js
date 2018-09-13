@@ -23,6 +23,7 @@ module.exports = {
     'list':'./src/pages/list/index.js',
     'detail':'./src/pages/detail/index.js',
     'cart':'./src/pages/cart/index.js',
+    'order-confirm':'./src/pages/order-confirm/index.js',
     'user-login':'./src/pages/user-login/index.js',
     'user-register':'./src/pages/user-register/index.js',
     'result':'./src/pages/result/index.js',
@@ -104,6 +105,7 @@ module.exports = {
     new HtmlWebpackPlugin(getHTMLConfig('list','列表页')),
     new HtmlWebpackPlugin(getHTMLConfig('detail','详情页')),
     new HtmlWebpackPlugin(getHTMLConfig('cart','购物车')),
+    new HtmlWebpackPlugin(getHTMLConfig('order-confirm','结算页')),
     new HtmlWebpackPlugin(getHTMLConfig('user-login','用户登录')),
     new HtmlWebpackPlugin(getHTMLConfig('user-register','用户注册')),
     new HtmlWebpackPlugin(getHTMLConfig('result','结果提示')),
@@ -130,6 +132,14 @@ module.exports = {
         changeOrigin:true
       },
       "/cart":{
+        target:"http://127.0.0.1:3001",
+        changeOrigin:true
+      },
+      "/order":{
+        target:"http://127.0.0.1:3001",
+        changeOrigin:true
+      },
+      "/shipping":{
         target:"http://127.0.0.1:3001",
         changeOrigin:true
       }

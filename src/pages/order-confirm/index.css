@@ -1,0 +1,134 @@
+/*
+送货地址
+*/
+.shipping-item,
+.shipping-add{
+	float: left;
+	width: 300px;
+	margin:0px 20px 20px 0px;
+	padding: 10px;
+	border:4px dashed #ddd;
+}
+.shipping-item.active{
+	border-color: #f21;
+}
+.shipping-title{
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px dashed #ddd;
+	font-size: 16px;
+	color: #666;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.shipping-detail{
+	height: 30px;
+	line-height: 30px;
+	margin-top: 10px;
+	font-size: 14px;
+	color: #666;
+}
+.shipping-add{
+	height: 116px;
+	font-size: 30px;
+	box-sizing: border-box;
+	text-align: center;
+	color: #555;
+}
+.shipping-footer{
+	float: right;
+	visibility:hidden;
+}
+.shipping-footer .link{
+	color: #f0f;
+}
+.shipping-item:hover .shipping-footer{
+	visibility:visible;
+}
+
+.product-box .cart-title li,
+.product-box .cart-item li,
+.product-box .cart-footer li{
+	float: left;
+}
+.product-box .cart-title,
+.product-box .cart-item,
+.product-box .cart-footer{
+	padding-left: 10px;
+	box-sizing: border-box;
+}
+.product-box .product-info{
+	width:70%;
+}
+.product-box .product-price{
+	width: 10%;
+}
+.product-box .product-count{
+	width: 10%;
+}
+.product-box .product-opreation{
+	width: 10%;
+}
+.product-box .cart-footer .product-submit{
+	float: right;
+}
+.product-box .gocart-btn{
+	display: block;
+	font-size: 16px;
+	margin:20px auto;
+}
+/*
+弹窗
+*/
+.modal{
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(0,0,0,0.5);
+}
+.modal .modal-container{
+	width: 400px;
+	background: #fff;
+	padding: 10px;
+	margin:100px auto;
+}
+.modal .modal-header{
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #ddd;
+	font-size: 14px;
+	color:#001;
+}
+.modal .modal-title{
+	float: left;
+}
+.modal .close-icon{
+	float: right;
+	margin-top: 12px;
+	cursor: pointer;
+}
+.modal .close-icon:hover{
+	color:#f00;
+}
+
+.modal .modal-body .form{
+	background: #fff;
+}
+.modal .modal-body .form .form-box{
+	margin:0 auto;
+}
+.modal .modal-body .form-item.city-item{
+	border:none;
+}
+.modal .modal-body .city-item .form-label{
+	border: 1px solid #bdbdbd;
+}
+.modal .modal-body .form-item.city-item select{
+	width: 120px;
+}
+.panel-body div{
+	cursor: pointer;
+}

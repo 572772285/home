@@ -24,6 +24,9 @@ var _util={
 	showErrorMessage:function(msg){
 		alert(msg)
 	},
+	confirm:function(msg){
+		return window.confirm(msg)
+	},
 	dologin:function(){
 		//登陆页面 传一个参数
 		window.location.href='/user-login.html?redirect='+encodeURIComponent(window.location.href)
