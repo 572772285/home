@@ -24,9 +24,12 @@ module.exports = {
     'detail':'./src/pages/detail/index.js',
     'cart':'./src/pages/cart/index.js',
     'order-confirm':'./src/pages/order-confirm/index.js',
+    'order-list':'./src/pages/order-list/index.js',
+    'order-detail':'./src/pages/order-detail/index.js',
     'user-login':'./src/pages/user-login/index.js',
     'user-register':'./src/pages/user-register/index.js',
     'result':'./src/pages/result/index.js',
+    'payment':'./src/pages/payment/index.js',
     'user-center':'./src/pages/user-center/index.js',
     'user-update-password':'./src/pages/user-update-password/index.js'
   },	
@@ -106,9 +109,12 @@ module.exports = {
     new HtmlWebpackPlugin(getHTMLConfig('detail','详情页')),
     new HtmlWebpackPlugin(getHTMLConfig('cart','购物车')),
     new HtmlWebpackPlugin(getHTMLConfig('order-confirm','结算页')),
+    new HtmlWebpackPlugin(getHTMLConfig('order-list','订单列表也')),
+    new HtmlWebpackPlugin(getHTMLConfig('order-detail','订单详情页')),
     new HtmlWebpackPlugin(getHTMLConfig('user-login','用户登录')),
     new HtmlWebpackPlugin(getHTMLConfig('user-register','用户注册')),
     new HtmlWebpackPlugin(getHTMLConfig('result','结果提示')),
+    new HtmlWebpackPlugin(getHTMLConfig('payment','结果提示')),
     new HtmlWebpackPlugin(getHTMLConfig('user-center','个人中心')),
     new HtmlWebpackPlugin(getHTMLConfig('user-update-password','修改密码')),
 
@@ -140,6 +146,10 @@ module.exports = {
         changeOrigin:true
       },
       "/shipping":{
+        target:"http://127.0.0.1:3001",
+        changeOrigin:true
+      },
+      "/payment":{
         target:"http://127.0.0.1:3001",
         changeOrigin:true
       }

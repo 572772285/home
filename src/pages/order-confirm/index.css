@@ -47,6 +47,7 @@
 	visibility:visible;
 }
 
+/* 订单列表 */
 .product-box .cart-title li,
 .product-box .cart-item li,
 .product-box .cart-footer li{
@@ -78,6 +79,8 @@
 	font-size: 16px;
 	margin:20px auto;
 }
+
+
 /*
 弹窗
 */
@@ -131,4 +134,7 @@
 }
 .panel-body div{
 	cursor: pointer;
+}
+.error-item{
+	display: none;
 }

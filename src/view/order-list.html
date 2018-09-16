@@ -7,22 +7,20 @@
 <body>
 	<%= require('html-loader!./common/nav.html') %>
 	<%= require('html-loader!./common/search.html') %>
-		<div class="order-confirm ">
-			<div class="container clearfix">
-				<div class="shipping-box">
+	<div class="order-list clearfix">
+		<div class="containner">
+	<%= require('html-loader!./common/side.html') %>	
+			<div class="right">
+				<div class="order-box">
 					
 				</div>
-				<div class="product-box">
+				<div class="pagination-box clearfix">
 					
 				</div>
-				<div class="modal-box">
-					
-				</div>
-				
 			</div>
+			
 		</div>
 	</div>
-		
 	<%= require('html-loader!./common/footer.html') %>
 </body>
 </html>

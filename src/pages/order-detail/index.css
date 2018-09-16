@@ -1,0 +1,80 @@
+.cart-title li{
+	float: left;
+}
+.order-detail .cart-title li,
+.order-detail .cart-item li,
+.order-detail .cart-footer li{
+	float: left;
+}
+.cart-item{
+	width: 100%;
+}
+.order-detail .cart-title,
+.order-detail .cart-item,
+.order-detail .cart-footer{
+	padding-left: 10px;
+	box-sizing: border-box;
+}
+.order-detail .product-info{
+	width:70%;
+}
+.order-detail .product-price{
+	width: 10%;
+}
+.order-detail .product-count{
+	width: 10%;
+}
+.order-detail .product-totalPrice{
+	width: 10%;
+}
+.order-detail .product-opreation{
+	width: 10%;
+}
+.order-detail .cart-footer .product-submit{
+	float: right;
+}
+.order-detail .gocart-btn{
+	display: block;
+	font-size: 16px;
+	margin:20px auto;
+}
+.order-detail .product-item{
+	margin-bottom: 0px;
+}
+.order-detail .order-title{
+	margin-top: 20px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #fafafa;
+	padding: 0 10px; 
+}
+.order-detail .order-title li{
+	float: left;
+	margin-right: 5px;
+	color: #666;
+}
+.order-detail .order-title li.order-payment .text{
+	color: #f21;
+	font-size: 14px;
+	font-weight: bold;
+}
+.order-detail .order-title li.order-detail{
+	float: right;
+}
+.order-detail order-info li{
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	color: #333;
+	margin-bottom: 10px;
+}
+.order-detail .order-info li.order-payment .text{
+	color: #f21;
+	font-size: 15px;
+	font-weight: bold;
+}
+.order-detail .order-info .btn{
+	width: 100px;
+	height: 40px;
+	border-radius: 5px;
+}

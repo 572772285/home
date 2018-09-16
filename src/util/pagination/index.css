@@ -1,7 +1,9 @@
 .pagination-box{
 	text-align: center;
+	margin-top: 15px;
 }
 .pagination-list{
+	margin: 0 auto;
 }
 .pagination-item{
 	float: left;

@@ -39,6 +39,9 @@ body{
 	font-weight: bold;
 	cursor: pointer;
 }
+.pagination-box{
+	margin: 0 auto;
+}
 .clearfix:before,.clearfix:after{
 	content:".";
 	display:block;
