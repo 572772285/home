@@ -36,16 +36,17 @@
 	float: left;
 }
 .product-info .product-name{
-	font-size: 18px;
-	font-weight: bold;
-	height: 40px;
-	line-height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    height: 80px;
+    line-height: 40px;
 }
 .product-info .product-description{
-	font-size: 16px;
-	height: 60px;
-	line-height: 30px;
-	color: orange;
+    font-size: 16px;
+    height: 80px;
+    line-height: 40px;
+    color: orange;
+    overflow: hidden;
 }
 .product-info .product-info-item{
 	height: 40px;

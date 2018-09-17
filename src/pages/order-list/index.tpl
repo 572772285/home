@@ -29,8 +29,8 @@
 					<span class="text">{{shipping.name}}</span>
 				</li>
 				<li class="order-payment">
-					<span class="lable">价格：￥</span>
-					<span class="text">{{payment}}</span>
+					<span class="lable">价格</span>
+					<span class="text">{{totalPrice}}</span>
 				</li>
 				<li class="order-detail">
 					<a target="_blank" href="./order-detail.html?orderNo={{orderNo}}" class="link">查看详情</a>
@@ -45,13 +45,13 @@
 						</a>
 					</li>
 					<li class="product-price">
-						￥{{price}}
+						￥{{Price}}
 					</li>
 					<li class="product-count">
 						<span>{{count}}</span>
 					</li>
 					<li class="product-totalPrice">
-						￥{{totalPrice}}
+						{{totalPrice}}
 					</li>
 				</ul>
 			{{/productList}}

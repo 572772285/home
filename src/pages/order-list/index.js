@@ -30,8 +30,9 @@ var page = {
 		_side.render('order-list')
 	},
 	loadOrderList:function(){
+		$('.order-box').html('<div class="loading"></div>');
 		_order.getOrderList(this.params,function(orders){
-			console.log(orders)
+			//获取图片
 			let list=orders.list.map(order=>{
 				order.productList.forEach(product=>{
 					if(product.FileList){
@@ -43,6 +44,7 @@ var page = {
 				order.createdTime = new Date(order.createdAt).toLocaleString();
 				return order;
 			})
+			console.log('list',list)
 			var html = _util.render(tpl,{
 				list:list,
 				notEmpty:!!list.length

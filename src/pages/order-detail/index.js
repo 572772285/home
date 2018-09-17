@@ -33,6 +33,7 @@ var page = {
 	},
 	loadOrderDetail:function(){
 		var _this=this;
+
 		_order.getOrder(this.params,function(order){
 			_this.renderOrderDetail(order)
 		},function(msg){
@@ -40,6 +41,7 @@ var page = {
 		})
 	},
 	renderOrderDetail:function(order){
+		$('.right').html('<div class="loading"></div>');
 		if(order){
 					//图片
 			order.productList.forEach(product=>{

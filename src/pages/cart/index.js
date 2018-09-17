@@ -134,7 +134,7 @@ var page = {
 
 		//缓存购物车信息，用来提交时验证
 		this.cart=cart;
-
+		$('.cart-box').html('<div class="loading"></div>');
 		_nav.loadeCartCount()
 		//购物车数据适配
 		cart.cartList.forEach(item=>{

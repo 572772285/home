@@ -14,6 +14,7 @@ var page = {
 	},
 	onload:function(){
 		_side.render('user-center')
+		$('.right').html('<div class="loading"></div>');
 	},
 	loadUserInfo:function(){
 		_user.getUserInfo(function(userInfo){

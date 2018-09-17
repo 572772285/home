@@ -71,8 +71,7 @@ init: function(){
 		$('.product-box').on('click','.btn-submit',function(){
 			if(_this.data.shippingId){
  				_order.creatOrder({shippingId:_this.data.shippingId},function(order){
- 					console.log(order)
- 					// window.location.href='./payment.html?orderNo='+order.orderNo;
+ 					window.location.href='./payment.html?orderNo='+order.orderNo;
  				},function(msg){
 					_util.showErrorMessage(msg)
  				})
@@ -84,6 +83,7 @@ init: function(){
 	},
 	loadShippingList:function(){
 		var _this=this;
+		this.$shippingBox.html('<div class="loading"></div>');
 		_shipping.getShippingList(function(shippings){
 			_this.rederShipping(shippings)
 		},function(msg){
@@ -106,6 +106,7 @@ init: function(){
 	},
 	loadProductList:function(){
 		var _this=this;
+		$('.product-box').html('<div class="loading"></div>');
 		_order.getOrderProductList(function(result){
 			console.log('result',result)
 			result.cartList.forEach(item=>{

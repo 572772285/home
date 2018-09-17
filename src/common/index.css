@@ -247,3 +247,21 @@ panel
 	color: #f40;
 	margin-right: 20px;
 }
+
+/* loading图标 */
+.loading {
+	width: 800px;
+	height: 600px;
+	margin: 20px auto;
+	background: url('../images/loading.gif')
+}
+
+/* 面包屑 */
+.mianbaoxie{
+	color: #666;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+/* 公用的防字体溢出 */

@@ -61,6 +61,7 @@ var page = {
 	loadProductDetail:function(){
 		var _this=this;
 		//获取详情页数据，data为this.params.productId
+		$('.detail-box').html('<div class="loading"></div>');
 		_product.getProductDetail({productId:this.params.productId},function(product){
 			if(product){
 				

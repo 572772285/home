@@ -41,7 +41,7 @@
 			</li>
 			<li class="order-payment">
 				<span class="lable">价格：￥</span>
-				<span class="text">{{payment}}</span>
+				<span class="text">{{totalPrice}}</span>
 			</li>
 			<li class="order-opreation">
 				{{#needpay}}

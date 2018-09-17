@@ -8,6 +8,10 @@
 	<%= require('html-loader!./common/nav.html') %>
 	<%= require('html-loader!./common/search.html') %>
 		<div class="list">
+			<div class="mianbaoxie">
+				<span>页面分类/</span>
+				<span><%= htmlWebpackPlugin.options.title %></span>
+			</div>
 			<div class="containner clearfix">
 				<ul class="sort">
 					<li class="sort-item default active">默认排序</li>

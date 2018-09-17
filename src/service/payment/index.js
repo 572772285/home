@@ -12,12 +12,11 @@ const  _payment = {
 
 		})
 	},
-	getPaymenStatus:function(data,success,error){
+	getPaymentStatus:function(data,success,error){
 		_util.request({
 			url:"/payment/status",
 			data:data,
 			success:success,
-			
 			error:error
 
 		})
